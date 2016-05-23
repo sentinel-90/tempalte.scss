@@ -1,0 +1,12 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "lib/_bootstrap";
+@import "lib/_font-awesome";
+@import "lib/_reset";
+@import "lib/_var";
+@import "compass";
+
+@include stickyFooter(377px, "#wrapper", "#footer");

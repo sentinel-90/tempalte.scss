@@ -1,0 +1,65 @@
+@mixin clear {
+  &:after {
+    content: '';
+
+    display: block;
+    clear: both;
+  }
+}
+@mixin block-center {
+  position: relative;
+
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  @include clear;
+}
+.clear {
+  &:after {
+    content: '';
+
+    display: block;
+    clear: both;
+  }
+}
+.block-center {
+  position: relative;
+
+  max-width: 1250px;
+  margin: 0 auto;
+  padding-right: 10px;
+  padding-left: 10px;
+
+  @include clear;
+}
+.content-block {
+  overflow: hidden;
+}
+
+@mixin stickyFooter($footerHeight, $wrapSelector, $footerSelector) {
+  html, body {
+    height: 100%;
+  }
+
+  #{$wrapSelector} {
+    min-height: 100%;
+    &:after {
+      content: "";
+      display: block;
+    }
+  }
+
+  #{$wrapSelector}:after {
+    height: $footerHeight;
+  }
+
+  #{$footerSelector} {
+    margin-top: -$footerHeight;
+    min-height: $footerHeight;
+  }
+}
+
+$transition-default: all 300ms ease;
+$awesome: 'FontAwesome';
