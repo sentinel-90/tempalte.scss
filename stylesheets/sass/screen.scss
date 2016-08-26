@@ -9,4 +9,6 @@
 @import "lib/_var";
 @import "compass";
 
+$image: "../../images/";
+
 @include stickyFooter(377px, "#wrapper", "#footer");
